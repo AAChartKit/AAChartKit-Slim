@@ -127,11 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				270D4A5D1FB2E65E00A77805 /* AAChartKit.h */,
+				270D4A621FB2E65E00A77805 /* AAGlobalMacro.h */,
 				270D4A5E1FB2E65E00A77805 /* AAChartModel.h */,
 				270D4A5F1FB2E65E00A77805 /* AAChartModel.m */,
 				270D4A601FB2E65E00A77805 /* AAChartView.h */,
 				270D4A611FB2E65E00A77805 /* AAChartView.m */,
-				270D4A621FB2E65E00A77805 /* AAGlobalMacro.h */,
 				270D4A631FB2E65E00A77805 /* AAJsonConverter.h */,
 				270D4A641FB2E65E00A77805 /* AAJsonConverter.m */,
 				270D4A651FB2E65E00A77805 /* AASeriesElement.h */,
@@ -144,12 +144,12 @@
 			isa = PBXGroup;
 			children = (
 				270D4A691FB2E65E00A77805 /* AAChartView.html */,
-				270D4A6A1FB2E65E00A77805 /* AAFunnel.js */,
-				270D4A6B1FB2E65E00A77805 /* AAHighCharts-3d.js */,
+				270D4A6F1FB2E65E00A77805 /* AAOptionsConstructor.js */,
+				270D4A6E1FB2E65E00A77805 /* AAJQueryLibrary.js */,
 				270D4A6C1FB2E65E00A77805 /* AAHighChartsLibrary.js */,
 				270D4A6D1FB2E65E00A77805 /* AAHighchartsMore.js */,
-				270D4A6E1FB2E65E00A77805 /* AAJQueryLibrary.js */,
-				270D4A6F1FB2E65E00A77805 /* AAOptionsConstructor.js */,
+				270D4A6B1FB2E65E00A77805 /* AAHighCharts-3d.js */,
+				270D4A6A1FB2E65E00A77805 /* AAFunnel.js */,
 			);
 			path = AAJSFiles;
 			sourceTree = "<group>";
