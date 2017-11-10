@@ -12,13 +12,13 @@ Pod::Spec.new do |s|
 5. `AAChartView + AAChartModel = Chart`  In the AAChartKit,it follows a minimalist formula: ` Chart view + Chart model = The chart you want`.  
 ***
                    DESC
-    s.homepage     = 'https://github.com/AAChartModel/AAChartKit'
+    s.homepage     = 'https://github.com/AAChartModel/AAChartKit-Slim'
     s.license      = { :type => "MIT", :file => 'LICENSE' }
     s.authors      = {'An An' => '18256973864@163.com'}
     s.platform     = :ios, '7.0'
     s.prefix_header_contents = '#import "AAGlobalMacro.h"'
     s.prefix_header_file = 'AAChartKit/PrefixHeader.pch'
-    s.source       = {:git => 'https://github.com/AAChartModel/AAChartKit.git', :tag => s.version}
+    s.source       = {:git => 'https://github.com/AAChartModel/AAChartKit-Slim.git', :tag => s.version}
     s.social_media_url = 'https://github.com/AAChartModel'
     s.source_files = 'AAChartKitLib/**/*.{h,m}'
     s.resource_bundles    = { 'AAChartKitLib' => 'AAChartKitLib/AAJSFiles/**' }
