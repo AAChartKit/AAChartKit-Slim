@@ -38,7 +38,7 @@
 - (className * (^) (propertyPointerType propertyName)) propertyName##Set;
 
 #define AAPropSetFuncImplementation(className, propertyPointerType, propertyName)                                       \
-- (className * (^) (propertyPointerType propertyName))propertyName##Set{                                                \
+- (className * (^) (propertyPointerType propertyName))propertyName##Set {                                               \
 return ^(propertyPointerType propertyName) {                                                                            \
 self.propertyName = propertyName;                                                                                       \
 return self;                                                                                                            \

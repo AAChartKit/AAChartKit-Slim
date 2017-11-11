@@ -31,39 +31,42 @@
 #import "AAGlobalMacro.h"
 #import "AASeriesElement.h"
 
-typedef NS_ENUM(NSInteger,AAChartAnimationType){
-    AAChartAnimationTypeLinear =0,
-    AAChartAnimationTypeSwing,
-    AAChartAnimationTypeEaseInQuad,
-    AAChartAnimationTypeEaseOutQuad,
-    AAChartAnimationTypeEaseInOutQuad,
-    AAChartAnimationTypeEaseInCubic,
-    AAChartAnimationTypeEaseOutCubic,
-    AAChartAnimationTypeEaseInOutCubic,
-    AAChartAnimationTypeEaseInQuart,
-    AAChartAnimationTypeEaseOutQuart,
-    AAChartAnimationTypeEaseInOutQuart,
-    AAChartAnimationTypeEaseInQuint,
-    AAChartAnimationTypeEaseOutQuint,
-    AAChartAnimationTypeEaseInOutQuint,
-    AAChartAnimationTypeEaseInExpo,
-    AAChartAnimationTypeEaseOutExpo,
-    AAChartAnimationTypeEaseInOutExpo,
-    AAChartAnimationTypeEaseInSine,
-    AAChartAnimationTypeEaseOutSine,
-    AAChartAnimationTypeEaseInOutSine,
-    AAChartAnimationTypeEaseInCirc,
-    AAChartAnimationTypeEaseOutCirc,
-    AAChartAnimationTypeEaseInOutCirc,
-    AAChartAnimationTypeEaseInElastic,
-    AAChartAnimationTypeEaseOutElastic,
-    AAChartAnimationTypeEaseInOutElastic,
-    AAChartAnimationTypeEaseInBack,
-    AAChartAnimationTypeEaseOutBack,
-    AAChartAnimationTypeEaseInOutBack,
-    AAChartAnimationTypeEaseInBounce,
-    AAChartAnimationTypeEaseOutBounce,
-    AAChartAnimationTypeEaseInOutBounce,
+typedef NS_ENUM(NSInteger,AAChartAnimation) {
+    AAChartAnimationLinear = 0,
+    AAChartAnimationEaseInQuad,
+    AAChartAnimationEaseOutQuad,
+    AAChartAnimationEaseInOutQuad,
+    AAChartAnimationEaseInCubic,
+    AAChartAnimationEaseOutCubic,
+    AAChartAnimationEaseInOutCubic,
+    AAChartAnimationEaseInQuart,
+    AAChartAnimationEaseOutQuart,
+    AAChartAnimationEaseInOutQuart,
+    AAChartAnimationEaseInQuint,
+    AAChartAnimationEaseOutQuint,
+    AAChartAnimationEaseInOutQuint,
+    AAChartAnimationEaseInSine,
+    AAChartAnimationEaseOutSine,
+    AAChartAnimationEaseInOutSine,
+    AAChartAnimationEaseInExpo,
+    AAChartAnimationEaseOutExpo,
+    AAChartAnimationEaseInOutExpo,
+    AAChartAnimationEaseInCirc,
+    AAChartAnimationEaseOutCirc,
+    AAChartAnimationEaseInOutCirc,
+    AAChartAnimationEaseOutBounce,
+    AAChartAnimationEaseInBack,
+    AAChartAnimationEaseOutBack,
+    AAChartAnimationEaseInOutBack,
+    AAChartAnimationElastic,
+    AAChartAnimationSwingFromTo,
+    AAChartAnimationSwingFrom,
+    AAChartAnimationSwingTo,
+    AAChartAnimationBounce,
+    AAChartAnimationBouncePast,
+    AAChartAnimationEaseFromTo,
+    AAChartAnimationEaseFrom,
+    AAChartAnimationEaseTo,
 };
 
 typedef NSString *AAChartType;
@@ -129,7 +132,7 @@ AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartType, chartType);//
 AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartStackingType, stacking);//堆积样式
 AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartSymbolType, symbol);//折线曲线连接点的类型："circle", "square", "diamond", "triangle","triangle-down"，默认是"circle"
 AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartZoomType, zoomType);//缩放类型 AAChartZoomTypeX表示可沿着 x 轴进行手势缩放
-AAPropStatementAndFuncStatement(assign, AAChartModel, AAChartAnimationType, animationType);//设置图表的渲染动画类型
+AAPropStatementAndFuncStatement(assign, AAChartModel, AAChartAnimation, animationType);//设置图表的渲染动画类型
 AAPropStatementAndFuncStatement(strong, AAChartModel, NSNumber *, animationDuration);//设置图表的渲染动画时长
 
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, pointHollow);//折线曲线的连接点是否为空心的

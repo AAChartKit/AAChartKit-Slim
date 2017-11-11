@@ -99,11 +99,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AAChartAnimationType animationType = indexPath.row;
+    AAChartAnimation animationType = indexPath.row;
     [self animationTypeTableViewClicked:animationType];
 }
 
-- (void)animationTypeTableViewClicked:(AAChartAnimationType)chartAnimationType {
+- (void)animationTypeTableViewClicked:(AAChartAnimation)chartAnimationType {
     self.chartModel.animationType = chartAnimationType;
     [self.chartView aa_refreshChartWithChartModel:self.chartModel];//刷新图表数据
     _lastClickedBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;

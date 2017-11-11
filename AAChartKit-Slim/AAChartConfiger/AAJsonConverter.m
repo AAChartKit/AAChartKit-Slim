@@ -32,7 +32,7 @@
 
 @implementation AAJsonConverter
 
-+ (NSDictionary*)getObjectData:(id)obj {
++ (NSDictionary *)getObjectData:(id)obj {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     unsigned int propsCount;
     Class class = [obj class];
@@ -57,7 +57,7 @@
     return dic;
 }
 
-+ (NSData*)getJSON:(id)obj options:(NSJSONWritingOptions)options error:(NSError**)error {
++ (NSData *)getJSON:(id)obj options:(NSJSONWritingOptions)options error:(NSError**)error {
     return [NSJSONSerialization dataWithJSONObject:[self getObjectData:obj] options:options error:error];
 }
 
@@ -88,14 +88,14 @@
     return [self getObjectData:obj];
 }
 
-+ (NSString*)convertDictionaryIntoJson:(NSDictionary *)dictionary {
++ (NSString *)convertDictionaryIntoJson:(NSDictionary *)dictionary {
     NSError *parseError = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:&parseError];
     NSString *string =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     return string;
 }
 
-+ (NSString*)wipeOffTheLineBreakAndBlankCharacter:(NSString *)originalString {
++ (NSString *)wipeOffTheLineBreakAndBlankCharacter:(NSString *)originalString {
     NSString *str =[originalString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     str = [str stringByReplacingOccurrencesOfString:@"\r" withString:@""];
     str = [str stringByReplacingOccurrencesOfString:@"\n" withString:@""];
