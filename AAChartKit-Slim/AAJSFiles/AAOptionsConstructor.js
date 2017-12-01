@@ -35,32 +35,43 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
         }
         o.style.height = receivedHeight; //设置高度
         var AAChart = {
-                type: AAChartModel.chartType,//图表类型
-                inverted: AAChartModel.inverted,//设置是否反转坐标轴，使X轴垂直，Y轴水平。 如果值为 true，则 x 轴默认是 倒置 的。 如果图表中出现条形图系列，则会自动反转
-                backgroundColor: AAChartModel.backgroundColor,//图表背景色
+                type: AAChartModel.chartType,
+                //图表类型
+                inverted: AAChartModel.inverted,
+                //设置是否反转坐标轴，使X轴垂直，Y轴水平。 如果值为 true，则 x 轴默认是 倒置 的。 如果图表中出现条形图系列，则会自动反转
+                backgroundColor: AAChartModel.backgroundColor,
+                //图表背景色
                 animation: true,
-                zoomType: AAChartModel.zoomType,//设置手势缩放方向
-                panning: true,//设置手势缩放后是否可平移
-                polar: AAChartModel.polar,//是否辐射化图形
+                zoomType: AAChartModel.zoomType,
+                //设置手势缩放方向
+                panning: true,
+                //设置手势缩放后是否可平移
+                polar: AAChartModel.polar,
+                //是否辐射化图形
                 options3d: {
-                        enable: AAChartModel.options3dEnable,//是否 3D 化图形
+                        enable: AAChartModel.options3dEnable,
+                        //是否 3D 化图形
                         alpha: -15
                 }
 
         };
 
         var AATitle = {
-                text: AAChartModel.title,//标题文本内容
+                text: AAChartModel.title,
+                //标题文本内容
                 style: {
-                        color: "#000000",//标题颜色
+                        color: "#000000",
+                        //标题颜色
                         fontSize: "12px" //标题字体大小
                 }
         };
 
         var AASubtitle = {
-                text: AAChartModel.subtitle,//副标题文本内容
+                text: AAChartModel.subtitle,
+                //副标题文本内容
                 style: {
-                        color: "#000000",//副标题颜色
+                        color: "#000000",
+                        //副标题颜色
                         fontSize: "9px" //副标题字体大小
                 }
         };
@@ -69,8 +80,10 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
                 label: {
                         enable: AAChartModel.xAxisLabelsEnabled // X 轴是否显示文字
                 },
-                reversed: AAChartModel.xAxisReversed,//是否反转 X 轴
-                gridLineWidth: AAChartModel.xAxisGridLineWidth,// X 轴网格线宽度
+                reversed: AAChartModel.xAxisReversed,
+                //是否反转 X 轴
+                gridLineWidth: AAChartModel.xAxisGridLineWidth,
+                // X 轴网格线宽度
                 categories: AAChartModel.categories
         };
 
@@ -78,12 +91,15 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
                 label: {
                         enable: AAChartModel.yAxisLabelsEnabled // Y 轴是否显示数字
                 },
-                reversed: AAChartModel.yAxisReversed,//是否反转 Y 轴
-                gridLineWidth: AAChartModel.yAxisGridLineWidth,// Y 轴网格线宽度
+                reversed: AAChartModel.yAxisReversed,
+                //是否反转 Y 轴
+                gridLineWidth: AAChartModel.yAxisGridLineWidth,
+                // Y 轴网格线宽度
                 title: {
                         text: AAChartModel.yAxisTitle //Y 轴标题
                 },
-                lineWidth: 0,// Y 轴线宽度
+                lineWidth: 0,
+                // Y 轴线宽度
                 plotLines: [{
                         value: 0,
                         width: 1,
@@ -98,7 +114,8 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
         }
 
         var AASeries = {
-                stacking: AAChartModel.stacking,//图表堆叠类型
+                stacking: AAChartModel.stacking,
+                //图表堆叠类型
                 animation: {
                         duration: AAChartModel.animationDuration,
                         easing: AAChartModel.animationType,
@@ -157,48 +174,6 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
         //    alert(AAOptions.colorsTheme);//提示颜色字符串数组
         return AAOptions;
 
-}
-
-function configureTheEasingAnimationType(AAAnimationTye) {
-    var  animationTypeArr = [
-                             "linear",
-                             "easeInQuad",
-                             "easeOutQuad",
-                             "easeInOutQuad",
-                             "easeInCubic",
-                             "easeOutCubic",
-                             "easeInOutCubic",
-                             "easeInQuart",
-                             "easeOutQuart",
-                             "easeInOutQuart",
-                             "easeInQuint",
-                             "easeOutQuint",
-                             "easeInOutQuint",
-                             "easeInSine",
-                             "easeOutSine",
-                             "easeInOutSine",
-                             "easeInExpo",
-                             "easeOutExpo",
-                             "easeInOutExpo",
-                             "easeInCirc",
-                             "easeOutCirc",
-                             "easeInOutCirc",
-                             "easeOutBounce",
-                             "easeInBack",
-                             "easeOutBack",
-                             "easeInOutBack",
-                             "elastic",
-                             "swingFromTo",
-                             "swingFrom",
-                             "swingTo",
-                             "bounce",
-                             "bouncePast",
-                             "easeFromTo",
-                             "easeFrom",
-                             "easeTo",
-                             ] ;
-
-     return animationTypeArr[AAAnimationTye];
 }
 
 function configureAAPlotOptions(AAPlotOptions, AAChartModel) {
