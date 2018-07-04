@@ -166,10 +166,6 @@ AALineDashSyleType const AALineDashSyleTypeLongDashDotDot  = @"LongDashDotDot";
         _yAxisLabelsEnabled = YES;
         _yAxisGridLineWidth = @1;
         _legendEnabled = YES;
-//        _legendLayout = AAChartLegendLayoutTypeHorizontal;
-//        _legendAlign = AAChartLegendAlignTypeCenter;
-//        _legendVerticalAlign = AAChartLegendVerticalAlignTypeBottom;
-        
         _borderRadius = @0;//柱状图长条图头部圆角半径(可用于设置头部的形状,仅对条形图,柱状图有效,设置为1000时,柱形图或者条形图头部为楔形)
         _markerRadius = @6;//折线连接点的半径长度,如果值设置为0,这样就相当于不显示了
         _yAllowDecimals = YES; //默认y轴显示小数
@@ -208,9 +204,6 @@ AAPropSetFuncImplementation(AAChartModel, NSArray *, series);
 AAPropSetFuncImplementation(AAChartModel, BOOL , connectNulls);//设置折线是否断点重连(是否连接空值点)
 
 AAPropSetFuncImplementation(AAChartModel, BOOL, legendEnabled);//是否显示图例
-//AAPropSetFuncImplementation(AAChartModel, AAChartLegendLayoutType , legendLayout);
-//AAPropSetFuncImplementation(AAChartModel, AAChartLegendAlignType , legendAlign);
-//AAPropSetFuncImplementation(AAChartModel, AAChartLegendVerticalAlignType , legendVerticalAlign);
 
 AAPropSetFuncImplementation(AAChartModel, NSString *, backgroundColor);
 AAPropSetFuncImplementation(AAChartModel, BOOL,       options3dEnable);

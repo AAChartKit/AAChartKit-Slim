@@ -4,18 +4,22 @@
 //
 //  Created by An An on 17/3/23.
 //  Copyright © 2017年 An An. All rights reserved.
-//  source code ----*** https://github.com/AAChartModel/AAChartKit-Slim ***--- source code
-//
+//*************** ...... SOURCE CODE ...... ***************
+//***...................................................***
+//*** https://github.com/AAChartModel/AAChartKit        ***
+//*** https://github.com/AAChartModel/AAChartKit-Swift  ***
+//***...................................................***
+//*************** ...... SOURCE CODE ...... ***************
 
 /*
  
  * -------------------------------------------------------------------------------
  *
- * ❀❀❀   WARM TIPS!!!   ❀❀❀
+ * 🌕 🌖 🌗 🌘  ❀❀❀   WARM TIPS!!!   ❀❀❀ 🌑 🌒 🌓 🌔
  *
  * Please contact me on GitHub,if there are any problems encountered in use.
- * GitHub Issues : https://github.com/AAChartModel/AAChartKit-Slim/issues
- * ------------------------------------------------------------------------------
+ * GitHub Issues : https://github.com/AAChartModel/AAChartKit/issues
+ * -------------------------------------------------------------------------------
  * And if you want to contribute for this project, please contact me as well
  * GitHub        : https://github.com/AAChartModel
  * StackOverflow : https://stackoverflow.com/users/7842508/codeforu
@@ -25,20 +29,29 @@
  * -------------------------------------------------------------------------------
  
  */
-//
 
 #import <UIKit/UIKit.h>
+
 typedef NS_ENUM(NSInteger,SpecialChartVCChartType) {
-    SpecialChartVCChartTypeMixedLine = 0,
+    SpecialChartVCChartTypeColorfulColumnChart = 0,
+    SpecialChartVCChartTypeGradientColorBar ,
+    SpecialChartVCChartTypeMixedLine,
+    SpecialChartVCChartTypeArea,
+    SpecialChartVCChartTypeAreaspline,
     SpecialChartVCChartTypePie,
     SpecialChartVCChartTypeBubble,
     SpecialChartVCChartTypeScatter,
 //    SpecialChartVCChartTypeTreeMap,
+    SpecialChartVCChartTypeArearange,
+    SpecialChartVCChartTypeAreasplinerange,
+    SpecialChartVCChartTypeColumnrange,
+    SpecialChartVCChartTypeStepLine,
+    SpecialChartVCChartTypeStepArea,
+    SpecialChartVCChartTypeNightingaleRoseChart,
+    SpecialChartVCChartTypeBoxplot,
+    SpecialChartVCChartTypeWaterfall,
     SpecialChartVCChartTypePyramid,
     SpecialChartVCChartTypeFunnel,
-    SpecialChartVCChartTypeArearange,
-    SpecialChartVCChartTypeColumnrange,
-    SpecialChartVCChartTypeMixed,
 };
 
 @interface SpecialChartVC : UIViewController

@@ -64,6 +64,11 @@
 @property (nonatomic, assign) CGFloat  contentHeight;
 
 /**
+ Set the chart view can scroll or not
+ */
+@property (nonatomic, assign) BOOL scrollEnabled;
+
+/**
  Hide chart series content or not
  */
 @property (nonatomic, assign) BOOL     chartSeriesHidden;
@@ -109,6 +114,14 @@
  @param elementIndex element index
  */
 - (void)aa_showTheSeriesElementContentWithSeriesElementIndex:(NSInteger)elementIndex;
+
+/**
+ Hide the series element content with index
+ 
+ @param elementIndex element index
+ */
+- (void)aa_hideTheSeriesElementContentWithSeriesElementIndex:(NSInteger)elementIndex;
+
 
 @end
 

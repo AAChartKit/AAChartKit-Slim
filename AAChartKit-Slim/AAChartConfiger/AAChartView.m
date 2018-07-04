@@ -105,30 +105,31 @@
 //    [self drawChart];
 //    [self.delegate AAChartViewDidFinishLoad];
 //}
-//
+
 //- (void)drawChart {
 //    NSString *javaScriptStr = [self configTheJavaScriptString];
 //    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
 //}
-//
-//- (void)setChartSeriesHidden:(BOOL)chartSeriesHidden {
-//    _chartSeriesHidden = chartSeriesHidden;
-//    NSString *javaScriptStr = [NSString stringWithFormat:@"chartSeriesContentHideOrShow(%d)",_chartSeriesHidden];
-//    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
-//}
-//
-//- (void)aa_showTheSeriesElementContentWithSeriesElementIndex:(NSInteger)elementIndex {
-//    NSString *javaScriptStr = [NSString stringWithFormat:@"showTheSeriesElementContentWithIndex(%ld)",(long)elementIndex];
-//    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
-//}
-//
-//- (void)evaluateJavaScriptWithFunctionNameString:(NSString *)funcitonNameStr {
+
+- (void)setChartSeriesHidden:(BOOL)chartSeriesHidden {
+    _chartSeriesHidden = chartSeriesHidden;
+    NSString *javaScriptStr = [NSString stringWithFormat:@"chartSeriesContentHideOrShow(%d)",_chartSeriesHidden];
+    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
+}
+
+- (void)aa_showTheSeriesElementContentWithSeriesElementIndex:(NSInteger)elementIndex {
+    NSString *javaScriptStr = [NSString stringWithFormat:@"showTheSeriesElementContentWithIndex(%ld)",(long)elementIndex];
+    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
+}
+
+- (void)evaluateJavaScriptWithFunctionNameString:(NSString *)funcitonNameStr {
 //    [self  evaluateJavaScript:funcitonNameStr completionHandler:^(id item, NSError * _Nullable error) {
 //        [self printTheErrorMessageWithError:error];
 //    }];
-//}
-//
-//#elif
+    [self  stringByEvaluatingJavaScriptFromString:funcitonNameStr];
+
+}
+
 ///UIWebView页面加载完成之后调用
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self drawChart];
