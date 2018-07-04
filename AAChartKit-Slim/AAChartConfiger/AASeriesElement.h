@@ -37,8 +37,11 @@ AAPropStatementAndFuncStatement(strong, AASeriesElement, NSNumber *, borderRadiu
 AAPropStatementAndFuncStatement(copy,   AASeriesElement, NSString *, type);
 AAPropStatementAndFuncStatement(copy,   AASeriesElement, NSString *, name);
 AAPropStatementAndFuncStatement(strong, AASeriesElement, NSArray  *, data);
+AAPropStatementAndFuncStatement(copy,   AASeriesElement, NSString *, color);
 AAPropStatementAndFuncStatement(copy,   AASeriesElement, NSString *, innerSize);
 AAPropStatementAndFuncStatement(strong, AASeriesElement, AAMarker *, marker);
 AAPropStatementAndFuncStatement(copy,   AASeriesElement, NSString *, stacking);
+AAPropStatementAndFuncStatement(strong, AASeriesElement, id        , step);//是否转变为直方折线图
+
 
 @end

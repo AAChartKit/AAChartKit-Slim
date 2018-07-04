@@ -160,7 +160,7 @@
     ;
     
     //是否起用渐变色功能
-    _chartModel.gradientColorEnable = YES;
+    _chartModel.gradientColorEnabled = YES;
     
     [self.chartView aa_drawChartWithChartModel:_chartModel];
 }

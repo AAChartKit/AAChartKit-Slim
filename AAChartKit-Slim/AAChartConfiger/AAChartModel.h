@@ -31,6 +31,8 @@
 #import "AAGlobalMacro.h"
 #import "AASeriesElement.h"
 
+#define AACHARTKIT_EXTERN     extern __attribute__((visibility ("default")))
+
 typedef NS_ENUM(NSInteger,AAChartAnimation) {
     AAChartAnimationLinear = 0,
     AAChartAnimationEaseInQuad,
@@ -74,56 +76,71 @@ typedef NSString *AAChartSubtitleAlignType;
 typedef NSString *AAChartZoomType;
 typedef NSString *AAChartStackingType;
 typedef NSString *AAChartSymbolType;
-typedef NSString *AAChartLegendLayoutType;
-typedef NSString *AAChartLegendAlignType;
-typedef NSString *AAChartLegendVerticalAlignType;
-
-static AAChartType const AAChartTypeColumn      = @"column";
-static AAChartType const AAChartTypeBar         = @"bar";
-static AAChartType const AAChartTypeArea        = @"area";
-static AAChartType const AAChartTypeAreaspline  = @"areaspline";
-static AAChartType const AAChartTypeLine        = @"line";
-static AAChartType const AAChartTypeSpline      = @"spline";
-static AAChartType const AAChartTypeScatter     = @"scatter";
-static AAChartType const AAChartTypePie         = @"pie";
-static AAChartType const AAChartTypeBubble      = @"bubble";
-static AAChartType const AAChartTypePyramid     = @"pyramid";
-static AAChartType const AAChartTypeFunnel      = @"funnel";
-static AAChartType const AAChartTypeColumnrange = @"columnrange";
-static AAChartType const AAChartTypeArearange   = @"arearange";
-
-static AAChartSubtitleAlignType const AAChartSubtitleAlignTypeLeft   = @"left";
-static AAChartSubtitleAlignType const AAChartSubtitleAlignTypeCenter = @"center";
-static AAChartSubtitleAlignType const AAChartSubtitleAlignTypeRight  = @"right";
+typedef NSString *AAChartSymbolStyleType;
+typedef NSString *AAChartFontWeightType;
+typedef NSString *AALineDashSyleType;
 
 
-static AAChartZoomType const AAChartZoomTypeX   = @"x";
-static AAChartZoomType const AAChartZoomTypeY   = @"y";
-static AAChartZoomType const AAChartZoomTypeXY  = @"xy";
+AACHARTKIT_EXTERN AAChartType const AAChartTypeColumn;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeBar;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeArea;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeAreaspline;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeLine;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeSpline;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeScatter;
+AACHARTKIT_EXTERN AAChartType const AAChartTypePie;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeBubble;
+AACHARTKIT_EXTERN AAChartType const AAChartTypePyramid;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeFunnel;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeColumnrange;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeArearange;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeAreasplinerange;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeBoxplot;
+AACHARTKIT_EXTERN AAChartType const AAChartTypeWaterfall;
+AACHARTKIT_EXTERN AAChartType const AAChartTypePolygon;
 
-static AAChartStackingType const AAChartStackingTypeFalse    = @"nil";
-static AAChartStackingType const AAChartStackingTypeNormal   = @"normal";
-static AAChartStackingType const AAChartStackingTypePercent  = @"percent";
+AACHARTKIT_EXTERN AAChartSubtitleAlignType const AAChartSubtitleAlignTypeLeft;
+AACHARTKIT_EXTERN AAChartSubtitleAlignType const AAChartSubtitleAlignTypeCenter;
+AACHARTKIT_EXTERN AAChartSubtitleAlignType const AAChartSubtitleAlignTypeRight;
 
-static AAChartSymbolType const AAChartSymbolTypeCircle         = @"circle";
-static AAChartSymbolType const AAChartSymbolTypeSquare         = @"square";
-static AAChartSymbolType const AAChartSymbolTypeDiamond        = @"diamond";
-static AAChartSymbolType const AAChartSymbolTypeTriangle       = @"triangle";
-static AAChartSymbolType const AAChartSymbolTypeTriangle_down  = @"triangle-down";
+AACHARTKIT_EXTERN AAChartZoomType const AAChartZoomTypeNone;
+AACHARTKIT_EXTERN AAChartZoomType const AAChartZoomTypeX;
+AACHARTKIT_EXTERN AAChartZoomType const AAChartZoomTypeY;
+AACHARTKIT_EXTERN AAChartZoomType const AAChartZoomTypeXY;
 
-static AAChartLegendLayoutType const AAChartLegendLayoutTypeHorizontal  = @"horizontal";
-static AAChartLegendLayoutType const AAChartLegendLayoutTypeVertical    = @"vertical";
+AACHARTKIT_EXTERN AAChartStackingType const AAChartStackingTypeFalse;
+AACHARTKIT_EXTERN AAChartStackingType const AAChartStackingTypeNormal;
+AACHARTKIT_EXTERN AAChartStackingType const AAChartStackingTypePercent;
 
-static AAChartLegendAlignType const AAChartLegendAlignTypeLeft     = @"left";
-static AAChartLegendAlignType const AAChartLegendAlignTypeCenter   = @"center";
-static AAChartLegendAlignType const AAChartLegendAlignTypeRight    = @"right";
+AACHARTKIT_EXTERN AAChartSymbolType const AAChartSymbolTypeCircle;
+AACHARTKIT_EXTERN AAChartSymbolType const AAChartSymbolTypeSquare;
+AACHARTKIT_EXTERN AAChartSymbolType const AAChartSymbolTypeDiamond;
+AACHARTKIT_EXTERN AAChartSymbolType const AAChartSymbolTypeTriangle;
+AACHARTKIT_EXTERN AAChartSymbolType const AAChartSymbolTypeTriangle_down;
 
-static AAChartLegendVerticalAlignType const AAChartLegendVerticalAlignTypeTop     = @"top";
-static AAChartLegendVerticalAlignType const AAChartLegendVerticalAlignTypeMiddle  = @"middle";
-static AAChartLegendVerticalAlignType const AAChartLegendVerticalAlignTypeBottom  = @"bottom";
+AACHARTKIT_EXTERN AAChartSymbolStyleType const AAChartSymbolStyleTypeDefault;
+AACHARTKIT_EXTERN AAChartSymbolStyleType const AAChartSymbolStyleTypeInnerBlank;
+AACHARTKIT_EXTERN AAChartSymbolStyleType const AAChartSymbolStyleTypeBorderBlank;
+
+AACHARTKIT_EXTERN AAChartFontWeightType const AAChartFontWeightTypeThin;
+AACHARTKIT_EXTERN AAChartFontWeightType const AAChartFontWeightTypeRegular;
+AACHARTKIT_EXTERN AAChartFontWeightType const AAChartFontWeightTypeBold;
+
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeSolid;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeShortDash;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeShortDot;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeShortDashDot;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeShortDashDotDot;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeDot;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeDash;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeLongDash;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeDashDot;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeLongDashDot;
+AACHARTKIT_EXTERN AALineDashSyleType const AALineDashSyleTypeLongDashDotDot;
 
 
 @interface AAChartModel : NSObject
+@property (nonatomic,copy) NSString *titlee;
 AAPropStatementAndFuncStatement(copy,   AAChartModel, NSString *, title);//标题内容
 AAPropStatementAndFuncStatement(copy,   AAChartModel, NSString *, subtitle);//副标题内容
 AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartSubtitleAlignType, subtitleAlign);//图表副标题文本水平对齐方式。可选的值有 “left”，”center“和“right”。 默认是：center.
@@ -140,7 +157,7 @@ AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, inverted);//x 轴是
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, xAxisReversed);// x 轴翻转
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, yAxisReversed);//y 轴翻转
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, crosshairs);//是否显示准星线(默认显示)
-AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, gradientColorEnable);//是否要为渐变色
+AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, gradientColorEnabled);//是否要为渐变色
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, polar);//是否极化图形(变为雷达图)
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, dataLabelEnabled);//是否显示数据
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, xAxisLabelsEnabled);//x轴是否显示数据
@@ -156,9 +173,9 @@ AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL , connectNulls);//设
 
 
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, legendEnabled);//是否显示图例
-AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartLegendLayoutType, legendLayout);//图例数据项的布局。布局类型： "horizontal" 或 "vertical" 即水平布局和垂直布局 默认是：horizontal.
-AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartLegendAlignType, legendAlign);//设定图例在图表区中的水平对齐方式，合法值有left，center 和 right。
-AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartLegendVerticalAlignType, legendVerticalAlign);//设定图例在图表区中的垂直对齐方式，合法值有 top，middle 和 bottom。垂直位置可以通过 y 选项做进一步设定。
+//AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartLegendLayoutType, legendLayout);//图例数据项的布局。布局类型： "horizontal" 或 "vertical" 即水平布局和垂直布局 默认是：horizontal.
+//AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartLegendAlignType, legendAlign);//设定图例在图表区中的水平对齐方式，合法值有left，center 和 right。
+//AAPropStatementAndFuncStatement(copy,   AAChartModel, AAChartLegendVerticalAlignType, legendVerticalAlign);//设定图例在图表区中的垂直对齐方式，合法值有 top，middle 和 bottom。垂直位置可以通过 y 选项做进一步设定。
 
 AAPropStatementAndFuncStatement(copy,   AAChartModel, NSString *, backgroundColor);//图表背景色
 AAPropStatementAndFuncStatement(assign, AAChartModel, BOOL, options3dEnable);//是否3D化图形(仅对条形图,柱状图有效)

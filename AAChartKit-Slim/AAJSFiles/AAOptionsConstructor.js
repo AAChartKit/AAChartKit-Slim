@@ -149,13 +149,13 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
         }
 
         AAPlotOptions = configureAAPlotOptions(AAPlotOptions, AAChartModel); //配置 AAPlotOptions
-        var AALegend = {
-                enabled: AAChartModel.legendEnabled,
-                layout: AAChartModel.legendLayout,
-                align: AAChartModel.legendAlign,
-                verticalAlign: AAChartModel.legendVerticalAlign,
-                borderWidth: 0
-        };
+//        var AALegend = {
+//                enabled: AAChartModel.legendEnabled,
+//                layout: AAChartModel.legendLayout,
+//                align: AAChartModel.legendAlign,
+//                verticalAlign: AAChartModel.legendVerticalAlign,
+//                borderWidth: 0
+//        };
 
         var AAThemeColors = AAChartModel.colorsTheme;
 
@@ -166,7 +166,7 @@ function configureAAOptions(sender, receivedWidth, receivedHeight) {
         AAOptions.xAxis = AAXAxis;
         AAOptions.yAxis = AAYAxis;
         AAOptions.tooltip = AATooltip;
-        AAOptions.legend = AALegend;
+//        AAOptions.legend = AALegend;
         AAOptions.plotOptions = AAPlotOptions;
         AAOptions.colors = AAThemeColors;
         AAOptions.series = AAChartModel.series;

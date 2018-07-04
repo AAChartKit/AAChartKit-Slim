@@ -14,8 +14,11 @@ AAPropSetFuncImplementation(AASeriesElement, NSNumber *, borderRadius);
 AAPropSetFuncImplementation(AASeriesElement, NSString *, type);
 AAPropSetFuncImplementation(AASeriesElement, NSString *, name);
 AAPropSetFuncImplementation(AASeriesElement, NSArray  *, data);
+AAPropSetFuncImplementation(AASeriesElement, NSString *, color);
 AAPropSetFuncImplementation(AASeriesElement, NSString *, innerSize);
 AAPropSetFuncImplementation(AASeriesElement, AAMarker *, marker);
 AAPropSetFuncImplementation(AASeriesElement, NSString *, stacking);
+AAPropSetFuncImplementation(AASeriesElement, id        , step);//是否转变为直方折线图
+
 
 @end
