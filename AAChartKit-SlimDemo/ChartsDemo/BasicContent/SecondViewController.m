@@ -110,7 +110,7 @@ typedef void (^MyFirstBlock)(NSDictionary *);
     CGFloat chartViewHeight = self.view.frame.size.height-220;
     self.aaChartView = [[AAChartView alloc]init];
     self.aaChartView.frame = CGRectMake(0, 60, chartViewWidth, chartViewHeight);
-    self.aaChartView.delegate = self;
+//    self.aaChartView.delegate = self;
     self.aaChartView.scrollEnabled = NO;//禁用 AAChartView 滚动效果
 //    设置aaChartVie 的内容高度(content height)
 //    self.aaChartView.contentHeight = chartViewHeight*2;
@@ -146,9 +146,6 @@ typedef void (^MyFirstBlock)(NSDictionary *);
                  ]
                );
     [self configureTheStyleForDifferentTypeChart];//为不同类型图表设置样式
-    
-    /*配置 Y 轴标注线,解开注释,即可查看添加标注线之后的图表效果(NOTE:必须设置 Y 轴可见)*/
-    //    [self configureTheYAxisPlotLineForAAChartView];
     
     [self.aaChartView aa_drawChartWithChartModel:_aaChartModel];
 }

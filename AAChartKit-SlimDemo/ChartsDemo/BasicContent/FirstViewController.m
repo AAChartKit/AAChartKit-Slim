@@ -61,7 +61,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"AAChartKit";
+    self.title = @"AAChartKit-Slim";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configTheTableView];

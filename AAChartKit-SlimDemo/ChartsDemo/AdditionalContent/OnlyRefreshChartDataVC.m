@@ -103,7 +103,7 @@
     }
     
     self.chartView = [[AAChartView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height-250)];
-    self.chartView.delegate = self;
+//    self.chartView.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.chartView];
 
