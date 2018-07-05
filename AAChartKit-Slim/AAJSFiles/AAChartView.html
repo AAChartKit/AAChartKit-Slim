@@ -63,7 +63,7 @@
         </div>
         <script >
             
-            var AAGlobalChart;
+            var globalChart;
             function loadTheHighChartView (
                                            sender,
                                            receivedWidth,
@@ -84,37 +84,11 @@ if (AAOptions.plotOptions) {
     }
 }
 
-                                                    AAGlobalChart = Highcharts.chart('container', AAOptions);
+                                                    globalChart = Highcharts.chart('container', AAOptions);
             };
         
-        function onlyRefreshTheChartDataWithAAChartModel (receivedAAChartModel) {
-            var JavaScriptObject = JSON.parse(receivedAAChartModel);
-            var receivedSeriesElementArr = JavaScriptObject.series;
-            
-            for (var i = 0; i < receivedSeriesElementArr.length; i++) {
-                var receivedSeriesData = receivedSeriesElementArr[i].data;
-                // 获取series
-                var chartSeries =  $('#container').highcharts().series[i];
-                // 执行只刷新数据的函数
-                chartSeries.setData(receivedSeriesData);
-            }
-        }
         
-        function chartSeriesContentHideOrShow (hidden) {
-            for (var i = 0; i < AAGlobalChart.series.length; i++) {
-                var series = AAGlobalChart.series[i];
-                if (hidden == true) {
-                    series.hide();
-                } else {
-                    series.show();
-                }
-            }
-        }
-        
-        function showTheSeriesElementContentWithIndex (elementIndex) {
-            var series = AAGlobalChart.series[elementIndex];
-            series.show();
-        }
+
         
         function configureTheChartAnimationEasingType (easingType) {
             switch (easingType) {
@@ -295,6 +269,52 @@ if (AAOptions.plotOptions) {
                     return Math.pow(pos, 0.25);
                 }
             }
+        }
+        
+        function onlyRefreshTheChartDataWithSeries (receivedSeries) {
+            var receivedSeriesElementArr = JSON.parse(receivedSeries);
+            
+            for (var i = 0; i < receivedSeriesElementArr.length; i++) {
+                var receivedSeriesData = receivedSeriesElementArr[i].data;
+                // 获取series
+                var chartSeries =  globalChart.series[i];
+                // 执行只刷新数据的函数
+                chartSeries.setData(receivedSeriesData);
+            }
+        }
+        
+        //pragma mark -- setter method
+        function setTheChartViewContentWidth (receivedWidth) {
+            var container = document.getElementById('container');//获得元素
+            container.style.width = receivedWidth;//设置宽度
+            globalChart.reflow();
+        }
+        
+        function setTheChartViewContentHeight (receivedHeight) {
+            var container = document.getElementById('container');//获得元素
+            container.style.height = receivedHeight;//设置高度
+            globalChart.reflow();
+        }
+        
+        function setChartSeriesHidden (hidden) {
+            for (var i = 0; i < globalChart.series.length; i++) {
+                var series = globalChart.series[i];
+                if (hidden == true) {
+                    series.hide();
+                } else {
+                    series.show();
+                }
+            }
+        }
+        
+        function showTheSeriesElementContentWithIndex (elementIndex) {
+            var series = globalChart.series[elementIndex];
+            series.show();
+        }
+        
+        function hideTheSeriesElementContentWithIndex (elementIndex) {
+            var series = globalChart.series[elementIndex];
+            series.hide();
         }
         
             </script>

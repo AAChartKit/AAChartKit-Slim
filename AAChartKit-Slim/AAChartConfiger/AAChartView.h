@@ -27,18 +27,7 @@
  */
 //
 #import "AAChartModel.h"
-
-//#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
-//#import <WebKit/WebKit.h>
-//#define AAWebView WKWebView
-//#define AAWebViewDelegate WKNavigationDelegate
-//#define AASelfWebViewDelegate navigationDelegate
-//#elif
 #import <UIKit/UIKit.h>
-#define AAWebView UIWebView
-#define AAWebViewDelegate UIWebViewDelegate
-#define AASelfWebViewDelegate delegate
-//#endif
 
 @protocol AAChartViewDidFinishLoadDelegate<NSObject>
 
@@ -49,9 +38,9 @@
 
 @end
 
-@interface AAChartView : AAWebView<AAWebViewDelegate>
+@interface AAChartView : UIWebView<UIWebViewDelegate>
 
-@property (nonatomic, weak)   id<AAChartViewDidFinishLoadDelegate> delegate;
+@property (nonatomic, weak)   id<AAChartViewDidFinishLoadDelegate> chartViewDidFinishLoadDelegate;
 
 /**
  Content width of AAChartView
@@ -63,15 +52,17 @@
  */
 @property (nonatomic, assign) CGFloat  contentHeight;
 
-/**
- Set the chart view can scroll or not
- */
-@property (nonatomic, assign) BOOL scrollEnabled;
 
 /**
  Hide chart series content or not
  */
-@property (nonatomic, assign) BOOL     chartSeriesHidden;
+@property (nonatomic, assign) BOOL chartSeriesHidden;
+
+/**
+ Set the chart view background color be clear
+ */
+@property (nonatomic, assign) BOOL isClearBackgroundColor;
+
 
 
 /**
@@ -82,28 +73,18 @@
 - (void)aa_drawChartWithChartModel:(AAChartModel *)chartModel;
 
 /**
- Function of refreshing whole chart view content
- 
- @param chartModel The instance object of chart model
- */
-- (void)aa_refreshChartWithChartModel:(AAChartModel *)chartModel;
-
-/**
  Function of only refresh the chart data
  
  @param series  Series array of AAChartModel instance object
  */
 - (void)aa_onlyRefreshTheChartDataWithChartModelSeries:(NSArray<NSDictionary *> *)series;
-    
 
-
-    
 /**
- Function of only refresh the chart data
-
- @param series Series array of AAOptions instance object
+ Function of refreshing whole chart view content
+ 
+ @param chartModel The instance object of chart model
  */
-- (void)aa_onlyRefreshTheChartDataWithOptionsSeries:(NSArray<NSDictionary *> *)series;
+- (void)aa_refreshChartWithChartModel:(AAChartModel *)chartModel;
 
 
 

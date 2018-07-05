@@ -120,7 +120,7 @@ typedef void (^MyFirstBlock)(NSDictionary *);
     
     
     //设置 AAChartView 的背景色是否为透明
-//    self.aaChartView.isClearBackgroundColor = YES;
+    self.aaChartView.isClearBackgroundColor = YES;
     
     self.aaChartModel= AAObject(AAChartModel)
     .chartTypeSet(chartType)//图表类型
@@ -404,7 +404,10 @@ typedef void (^MyFirstBlock)(NSDictionary *);
             break;
     }
 
+
     [self refreshTheChartView];
+    
+    
     
 }
 

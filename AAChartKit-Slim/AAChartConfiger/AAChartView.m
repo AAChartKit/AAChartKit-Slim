@@ -37,9 +37,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.AASelfWebViewDelegate =self;
+        self.delegate = self;
         self.backgroundColor = [UIColor whiteColor];
-        //        self.scrollView.bounces = NO;
     }
     return self;
 }
@@ -52,11 +51,8 @@
 }
 
 - (void)configTheOptionsJsonWithChartModel:(AAChartModel *)chartModel {
- 
     _optionJson = [AAJsonConverter getPureOptionsString:chartModel];
 }
-    
-
 
 - (NSString *)configTheJavaScriptString {
     CGFloat chartViewContentWidth = self.contentWidth;
@@ -72,49 +68,15 @@
     
 }
 
+- (void)aa_onlyRefreshTheChartDataWithChartModelSeries:(NSArray<NSDictionary *> *)series {
+    NSString *seriesJsonStr=[AAJsonConverter getPureSeriesString:series];
+    NSString *javaScriptStr = [NSString stringWithFormat:@"onlyRefreshTheChartDataWithSeries('%@')",seriesJsonStr];
+    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
+}
+
 - (void)aa_refreshChartWithChartModel:(AAChartModel *)chartModel {
     [self configTheOptionsJsonWithChartModel:chartModel];
     [self drawChart];
-}
-    
-//- (void)aa_onlyRefreshTheChartDataWithChartModelSeries:(NSArray<NSDictionary *> *)series {
-//    NSString *seriesJsonStr=[AAJsonConverter getPureSeriesString:series];
-//    NSString *javaScriptStr = [NSString stringWithFormat:@"onlyRefreshTheChartDataWithSeries('%@')",seriesJsonStr];
-//    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
-//}
-    
-    
-
-
- 
-- (void)aa_onlyRefreshTheChartDataWithOptionsSeries:(NSArray<NSDictionary *> *)series {
-    [self aa_onlyRefreshTheChartDataWithChartModelSeries:series];
-}
-
-
-
-- (void)printTheErrorMessageWithError:(NSError *)error {
-    if (error) {
-        NSLog(@"WARNING!!!!! THERE ARE SOME ERROR INFOMATION_______%@",error);
-    }
-}
-//
-//#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
-/////WKWebView页面加载完成之后调用
-//- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-//    [self drawChart];
-//    [self.delegate AAChartViewDidFinishLoad];
-//}
-
-//- (void)drawChart {
-//    NSString *javaScriptStr = [self configTheJavaScriptString];
-//    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
-//}
-
-- (void)setChartSeriesHidden:(BOOL)chartSeriesHidden {
-    _chartSeriesHidden = chartSeriesHidden;
-    NSString *javaScriptStr = [NSString stringWithFormat:@"chartSeriesContentHideOrShow(%d)",_chartSeriesHidden];
-    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
 }
 
 - (void)aa_showTheSeriesElementContentWithSeriesElementIndex:(NSInteger)elementIndex {
@@ -122,38 +84,57 @@
     [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
 }
 
-- (void)evaluateJavaScriptWithFunctionNameString:(NSString *)funcitonNameStr {
-//    [self  evaluateJavaScript:funcitonNameStr completionHandler:^(id item, NSError * _Nullable error) {
-//        [self printTheErrorMessageWithError:error];
-//    }];
-    [self  stringByEvaluatingJavaScriptFromString:funcitonNameStr];
+- (void)aa_hideTheSeriesElementContentWithSeriesElementIndex:(NSInteger)elementIndex {
+    NSString *javaScriptStr = [NSString stringWithFormat:@"hideTheSeriesElementContentWithIndex(%ld)",(long)elementIndex];
+    [self evaluateJavaScriptWithFunctionNameString:javaScriptStr];
+}
 
+- (void)evaluateJavaScriptWithFunctionNameString:(NSString *)funcitonNameStr {
+    [self  stringByEvaluatingJavaScriptFromString:funcitonNameStr];
 }
 
 ///UIWebView页面加载完成之后调用
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self drawChart];
-    [self.delegate AAChartViewDidFinishLoad];
+    [self.chartViewDidFinishLoadDelegate AAChartViewDidFinishLoad];
 }
-
-//- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
-//    [self printTheErrorMessageWithError:error];
-//}
 
 - (void)drawChart {
     NSString *javaScriptStr =[self configTheJavaScriptString];
     [self  stringByEvaluatingJavaScriptFromString:javaScriptStr];
 }
 
-- (void)aa_onlyRefreshTheChartDataWithChartModel:(AAChartModel *)chartModel {
-    NSString *seriesJsonStr=[AAJsonConverter getPureOptionsString:chartModel];
-    NSString *javaScriptStr = [NSString stringWithFormat:@"onlyRefreshTheChartDataWithSeries('%@')",seriesJsonStr];
-    [self  stringByEvaluatingJavaScriptFromString:javaScriptStr];
-    
+- (void)setContentWidth:(CGFloat)contentWidth {
+    _contentWidth = contentWidth;
+    NSString *javaScriptStr = [NSString stringWithFormat:@"setTheChartViewContentWidth(%f)",_contentWidth];
+    [self evaluateJavaScriptWithSetterMethodNameString:javaScriptStr];
 }
 
-//#endif
+- (void)setContentHeight:(CGFloat)contentHeight {
+    _contentHeight = contentHeight;
+    NSString *javaScriptStr = [NSString stringWithFormat:@"setTheChartViewContentHeight(%f)",_contentHeight];
+    [self evaluateJavaScriptWithSetterMethodNameString:javaScriptStr];
+}
 
+- (void)setChartSeriesHidden:(BOOL)chartSeriesHidden {
+    _chartSeriesHidden = chartSeriesHidden;
+    NSString *jsStr = [NSString stringWithFormat:@"setChartSeriesHidden(%d)",_chartSeriesHidden];
+    [self evaluateJavaScriptWithSetterMethodNameString:jsStr];
+}
+
+- (void)setIsClearBackgroundColor:(BOOL)isClearBackgroundColor {
+    _isClearBackgroundColor = isClearBackgroundColor;
+    if (_isClearBackgroundColor == YES) {
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setOpaque:NO];
+    }
+}
+
+- (void)evaluateJavaScriptWithSetterMethodNameString:(NSString *)JSFunctionStr {
+    if (_optionJson) {
+        [self evaluateJavaScriptWithFunctionNameString:JSFunctionStr];
+    }
+}
 
 
 @end
