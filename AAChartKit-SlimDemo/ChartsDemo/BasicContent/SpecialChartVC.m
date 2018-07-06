@@ -116,7 +116,7 @@
     
     self.aaChartView = [[AAChartView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.aaChartView.scrollEnabled = NO;
+    self.aaChartView.scrollView.scrollEnabled = NO;
     self.aaChartView.contentHeight = self.aaChartView.frame.size.height-80;
     [self.view addSubview:self.aaChartView];
     
@@ -268,14 +268,13 @@
     } else if ([chartType isEqualToString:AAChartTypeArea]) {
         
         AAChartModel *aaChartModel = AAObject(AAChartModel)
-        .chartTypeSet(chartType)
+        .chartTypeSet(AAChartTypeArea)
         .symbolSet(AAChartSymbolTypeCircle)
-        .titleSet(@"带有数据阈值标志线的区域填充图")
+        .titleSet(@"颜色渐变的区域填充图")
         .markerRadiusSet(@6)//设置折线连接点宽度为0,即是隐藏连接点
         .subtitleSet(@"横屏查看效果更佳")
         .yAxisGridLineWidthSet(@0.5)
         .yAxisTitleSet(@"")
-//        .symbolStyleSet(AAChartSymbolStyleTypeInnerBlank)
         .dataLabelEnabledSet(true)
         .seriesSet(@[AAObject(AASeriesElement)
                      .nameSet(@"2017")
@@ -291,7 +290,7 @@
                                      @"stops": @[@[@0,@"rgba(220,20,60,0.1)"],
                                                  @[@1,@"rgba(220,20,60,1)"]]//颜色字符串设置支持十六进制类型和 rgba 类型
                                      }),]
-                   )
+                   );
 //        .yAxisPlotLinesSet(@[
 //                             AAObject(AAPlotLinesElement)
 //                             .colorSet(@"#F05353")//颜色值(16进制)
@@ -309,7 +308,6 @@
 //                             .labelSet(@{@"text":@"标示线2",@"x":@(0),@"style":@{@"color":@"#33bdfd"}})
 //                             ]
 //                           )
-        ;
         
         return aaChartModel;
         

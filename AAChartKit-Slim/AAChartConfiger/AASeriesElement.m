@@ -60,5 +60,37 @@ AAPropSetFuncImplementation(AASeriesElement, AADataLabels*, dataLabels);
 AAPropSetFuncImplementation(AASeriesElement, id        , step);//是否转变为直方折线图
 AAPropSetFuncImplementation(AASeriesElement, NSDictionary *, states);
 
+@end
+
+
+@implementation AADataLabels
+
+AAPropSetFuncImplementation(AADataLabels, BOOL      , enabled);
+AAPropSetFuncImplementation(AADataLabels, AAStyle  *, style);
+AAPropSetFuncImplementation(AADataLabels, NSString *, format);
+AAPropSetFuncImplementation(AADataLabels, NSNumber *, rotation);
+AAPropSetFuncImplementation(AADataLabels, BOOL      , allowOverlap);
+AAPropSetFuncImplementation(AADataLabels, BOOL      , useHTML);
+AAPropSetFuncImplementation(AADataLabels, NSNumber*, distance);
+
+@end
+
+@implementation AAStyle
+
+//-(instancetype)init{
+//    self = [super init];
+//    if (self) {
+//        self.color = @"#000000";
+//        self.fontSize = @"11px";
+//        self.fontWeight = @"bold";可选的值有 bold 和 thin 两种,分别对应的是加粗字体和纤细字体
+//        self.textOutline = @"1px 1px contrast";
+//    }
+//    return self;
+//}
+
+AAPropSetFuncImplementation(AAStyle, NSString *, color);
+AAPropSetFuncImplementation(AAStyle, NSString *, fontSize);
+AAPropSetFuncImplementation(AAStyle, NSString *, fontWeight);
+AAPropSetFuncImplementation(AAStyle, NSString *, textOutline);
 
 @end

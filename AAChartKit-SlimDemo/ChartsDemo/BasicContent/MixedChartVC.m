@@ -24,7 +24,7 @@
 
     self.aaChartView = [[AAChartView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.aaChartView.scrollEnabled = NO;
+    self.aaChartView.scrollView.scrollEnabled = NO;
     self.aaChartView.contentHeight = self.aaChartView.frame.size.height-80;
     [self.view addSubview:self.aaChartView];
     

@@ -75,15 +75,15 @@
                                                     receivedWidth,
                                                     receivedHeight
                                                     );
-
-if (AAOptions.plotOptions) {
-    var animation = AAOptions.plotOptions.series.animation;
-    if (animation) {
-        var animationEasingType = animation.easing;
-        AAOptions.plotOptions.series.animation.easing = configureTheChartAnimationEasingType(animationEasingType);
-    }
-}
-
+                                                    
+                                                    if (AAOptions.plotOptions) {
+                                                        var animation = AAOptions.plotOptions.series.animation;
+                                                        if (animation) {
+                                                            var animationEasingType = animation.easing;
+                                                            AAOptions.plotOptions.series.animation.easing = configureTheChartAnimationEasingType(animationEasingType);
+                                                        }
+                                                    }
+                                                    
                                                     globalChart = Highcharts.chart('container', AAOptions);
             };
         

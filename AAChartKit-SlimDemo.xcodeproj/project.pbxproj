@@ -14,7 +14,6 @@
 		270D4A551FB2E5EB00A77805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A541FB2E5EB00A77805 /* main.m */; };
 		270D4A711FB2E65E00A77805 /* AAChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A5F1FB2E65E00A77805 /* AAChartModel.m */; };
 		270D4A721FB2E65E00A77805 /* AAChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A611FB2E65E00A77805 /* AAChartView.m */; };
-		270D4A731FB2E65E00A77805 /* AAJsonConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A641FB2E65E00A77805 /* AAJsonConverter.m */; };
 		270D4A741FB2E65E00A77805 /* AASeriesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A661FB2E65E00A77805 /* AASeriesElement.m */; };
 		270D4A751FB2E65E00A77805 /* AAChartKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A671FB2E65E00A77805 /* AAChartKit.podspec */; };
 		270D4A761FB2E65E00A77805 /* AAChartView.html in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A691FB2E65E00A77805 /* AAChartView.html */; };
@@ -27,8 +26,6 @@
 		27C9DBE120ED54E9009D6769 /* ShowManyChartViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE020ED54E9009D6769 /* ShowManyChartViewVC.m */; };
 		27C9DBE420ED54F8009D6769 /* ChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE320ED54F7009D6769 /* ChartListVC.m */; };
 		27C9DBE720ED55D9009D6769 /* MixedChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE520ED55D9009D6769 /* MixedChartVC.m */; };
-		27C9DBEA20ED5638009D6769 /* AADataLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE820ED5638009D6769 /* AADataLabels.m */; };
-		27C9DBED20ED56A7009D6769 /* AAStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBEB20ED56A7009D6769 /* AAStyle.m */; };
 		27C9DBF020ED5787009D6769 /* OnlyRefreshChartDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBEE20ED5787009D6769 /* OnlyRefreshChartDataVC.m */; };
 		27C9DBF620ED5AC5009D6769 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBF420ED5AC5009D6769 /* SecondViewController.m */; };
 		27C9DBF920ED5B7E009D6769 /* SpecialChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBF820ED5B7E009D6769 /* SpecialChartVC.m */; };
@@ -49,8 +46,6 @@
 		270D4A601FB2E65E00A77805 /* AAChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAChartView.h; sourceTree = "<group>"; };
 		270D4A611FB2E65E00A77805 /* AAChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAChartView.m; sourceTree = "<group>"; };
 		270D4A621FB2E65E00A77805 /* AAGlobalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAGlobalMacro.h; sourceTree = "<group>"; };
-		270D4A631FB2E65E00A77805 /* AAJsonConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAJsonConverter.h; sourceTree = "<group>"; };
-		270D4A641FB2E65E00A77805 /* AAJsonConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAJsonConverter.m; sourceTree = "<group>"; };
 		270D4A651FB2E65E00A77805 /* AASeriesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASeriesElement.h; sourceTree = "<group>"; };
 		270D4A661FB2E65E00A77805 /* AASeriesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASeriesElement.m; sourceTree = "<group>"; };
 		270D4A671FB2E65E00A77805 /* AAChartKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AAChartKit.podspec; sourceTree = "<group>"; };
@@ -69,10 +64,6 @@
 		27C9DBE320ED54F7009D6769 /* ChartListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartListVC.m; sourceTree = "<group>"; };
 		27C9DBE520ED55D9009D6769 /* MixedChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedChartVC.m; sourceTree = "<group>"; };
 		27C9DBE620ED55D9009D6769 /* MixedChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedChartVC.h; sourceTree = "<group>"; };
-		27C9DBE820ED5638009D6769 /* AADataLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AADataLabels.m; sourceTree = "<group>"; };
-		27C9DBE920ED5638009D6769 /* AADataLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AADataLabels.h; sourceTree = "<group>"; };
-		27C9DBEB20ED56A7009D6769 /* AAStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAStyle.m; sourceTree = "<group>"; };
-		27C9DBEC20ED56A7009D6769 /* AAStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAStyle.h; sourceTree = "<group>"; };
 		27C9DBEE20ED5787009D6769 /* OnlyRefreshChartDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyRefreshChartDataVC.m; sourceTree = "<group>"; };
 		27C9DBEF20ED5787009D6769 /* OnlyRefreshChartDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyRefreshChartDataVC.h; sourceTree = "<group>"; };
 		27C9DBF420ED5AC5009D6769 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -143,14 +134,8 @@
 				270D4A5F1FB2E65E00A77805 /* AAChartModel.m */,
 				270D4A601FB2E65E00A77805 /* AAChartView.h */,
 				270D4A611FB2E65E00A77805 /* AAChartView.m */,
-				270D4A631FB2E65E00A77805 /* AAJsonConverter.h */,
-				270D4A641FB2E65E00A77805 /* AAJsonConverter.m */,
 				270D4A651FB2E65E00A77805 /* AASeriesElement.h */,
 				270D4A661FB2E65E00A77805 /* AASeriesElement.m */,
-				27C9DBE920ED5638009D6769 /* AADataLabels.h */,
-				27C9DBE820ED5638009D6769 /* AADataLabels.m */,
-				27C9DBEC20ED56A7009D6769 /* AAStyle.h */,
-				27C9DBEB20ED56A7009D6769 /* AAStyle.m */,
 			);
 			path = AAChartConfiger;
 			sourceTree = "<group>";
@@ -285,18 +270,15 @@
 			files = (
 				270D4A721FB2E65E00A77805 /* AAChartView.m in Sources */,
 				270D4A891FB2E69300A77805 /* FirstViewController.m in Sources */,
-				27C9DBEA20ED5638009D6769 /* AADataLabels.m in Sources */,
 				270D4A741FB2E65E00A77805 /* AASeriesElement.m in Sources */,
 				27C9DBE120ED54E9009D6769 /* ShowManyChartViewVC.m in Sources */,
 				27C9DBE420ED54F8009D6769 /* ChartListVC.m in Sources */,
-				27C9DBED20ED56A7009D6769 /* AAStyle.m in Sources */,
 				27C9DBF920ED5B7E009D6769 /* SpecialChartVC.m in Sources */,
 				270D4A551FB2E5EB00A77805 /* main.m in Sources */,
 				27C9DBF020ED5787009D6769 /* OnlyRefreshChartDataVC.m in Sources */,
 				27C9DBE720ED55D9009D6769 /* MixedChartVC.m in Sources */,
 				270D4A711FB2E65E00A77805 /* AAChartModel.m in Sources */,
 				27C9DBF620ED5AC5009D6769 /* SecondViewController.m in Sources */,
-				270D4A731FB2E65E00A77805 /* AAJsonConverter.m in Sources */,
 				270D4A881FB2E69300A77805 /* ChartAnimationTypeVC.m in Sources */,
 				270D4A471FB2E5EB00A77805 /* AppDelegate.m in Sources */,
 			);
