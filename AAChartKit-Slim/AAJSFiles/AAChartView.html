@@ -63,32 +63,21 @@
         </div>
         <script >
             
-            var globalChart;
-            function loadTheHighChartView (
-                                           sender,
-                                           receivedWidth,
-                                           receivedHeight
-                                           ){
-                <!--                alert(sender);-->
-                var AAOptions = configureAAOptions (
-                                                    sender,
-                                                    receivedWidth,
-                                                    receivedHeight
-                                                    );
-                                                    
-                                                    if (AAOptions.plotOptions) {
-                                                        var animation = AAOptions.plotOptions.series.animation;
-                                                        if (animation) {
-                                                            var animationEasingType = animation.easing;
-                                                            AAOptions.plotOptions.series.animation.easing = configureTheChartAnimationEasingType(animationEasingType);
-                                                        }
-                                                    }
-                                                    
-                                                    globalChart = Highcharts.chart('container', AAOptions);
-            };
-        
-        
-
+        var globalChart;
+            
+        function loadTheHighChartView (sender, receivedWidth, receivedHeight) {
+            var AAOptions = configureAAOptions (sender, receivedWidth, receivedHeight);
+                
+            if (AAOptions.plotOptions) {
+                var animation = AAOptions.plotOptions.series.animation;
+                if (animation) {
+                    var animationEasingType = animation.easing;
+                    AAOptions.plotOptions.series.animation.easing = configureTheChartAnimationEasingType(animationEasingType);
+                }
+            }
+                
+                globalChart = Highcharts.chart('container', AAOptions);
+        };
         
         function configureTheChartAnimationEasingType (easingType) {
             switch (easingType) {

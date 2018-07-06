@@ -331,12 +331,12 @@
                      .borderWidthSet(@0)//描边的宽度
                      .allowPointSelectSet(false)//是否允许在点击数据点标记(扇形图点击选中的块发生位移)
                      .statesSet(@{@"hover": @{@"enabled": @(bool_false)}})//禁用点击区块之后出现的半透明遮罩层 (先定义bool变量的原因是，直接用true，false，处理完成之后容易变成0或者1。https://www.cnblogs.com/haojuncong/p/4652998.html )
-//                     .dataLabelsSet(AAObject(AADataLabels)
-//                                    .enabledSet(true)
-//                                    .useHTMLSet(true)
-//                                    .distanceSet(@10)
-//                                    .formatSet(@"<span style=""color:#A9A9A9;font-weight:thin;font-size:11px"">{point.name}</span> <br><span style=""color:#1E90FF;font-weight:bold;font-size:13px"">{point.percentage:.1f}</span><span style=""color:#1E90FF;font-weight:thin;font-size:10px"">%</span>")
-//                                    )
+                     .dataLabelsSet(AAObject(AADataLabels)
+                                    .enabledSet(true)
+                                    .useHTMLSet(true)
+                                    .distanceSet(@10)
+                                    .formatSet(@"<span style=""color:#A9A9A9;font-weight:thin;font-size:11px"">{point.name}</span> <br><span style=""color:#1E90FF;font-weight:bold;font-size:13px"">{point.percentage:.1f}</span><span style=""color:#1E90FF;font-weight:thin;font-size:10px"">%</span>")
+                                    )
                      .dataSet(
                               @[
                                 @[@"Firefox",   @3336.2],

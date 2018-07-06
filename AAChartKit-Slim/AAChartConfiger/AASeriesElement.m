@@ -75,18 +75,8 @@ AAPropSetFuncImplementation(AADataLabels, NSNumber*, distance);
 
 @end
 
-@implementation AAStyle
 
-//-(instancetype)init{
-//    self = [super init];
-//    if (self) {
-//        self.color = @"#000000";
-//        self.fontSize = @"11px";
-//        self.fontWeight = @"bold";可选的值有 bold 和 thin 两种,分别对应的是加粗字体和纤细字体
-//        self.textOutline = @"1px 1px contrast";
-//    }
-//    return self;
-//}
+@implementation AAStyle
 
 AAPropSetFuncImplementation(AAStyle, NSString *, color);
 AAPropSetFuncImplementation(AAStyle, NSString *, fontSize);
