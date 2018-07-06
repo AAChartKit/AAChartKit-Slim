@@ -282,7 +282,6 @@ typedef void (^MyFirstBlock)(NSDictionary *);
         UISegmentedControl * segmentedControl = [[UISegmentedControl alloc]initWithItems:segmentedArray[i]];
         segmentedControl.frame = CGRectMake(20, 40*i+(self.view.frame.size.height-145), self.view.frame.size.width-40, 20);
         segmentedControl.tintColor = [UIColor redColor];
-//        segmentedControl.tintColor = [UIColor lightGrayColor];
         segmentedControl.selectedSegmentIndex = 0;
         segmentedControl.tag = i;
         [segmentedControl addTarget:self action:@selector(customsegmentedControlCellValueBeChanged:) forControlEvents:UIControlEventValueChanged];
