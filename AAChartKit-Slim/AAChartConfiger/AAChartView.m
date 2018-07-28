@@ -43,7 +43,7 @@
 }
 
 - (NSURLRequest *)getJavaScriptFileURLRequest {
-    NSString *webPath = [[NSBundle mainBundle] pathForResource:@"AAChartView" ofType:@"html"];
+    NSString *webPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"AAChartView" ofType:@"html" inDirectory:@"AAJSFiles.bundle"];
     NSURL *webURL = [NSURL fileURLWithPath:webPath];
     NSURLRequest *URLRequest = [[NSURLRequest alloc] initWithURL:webURL];
     return URLRequest;

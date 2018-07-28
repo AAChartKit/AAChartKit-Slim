@@ -16,13 +16,9 @@
 		270D4A721FB2E65E00A77805 /* AAChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A611FB2E65E00A77805 /* AAChartView.m */; };
 		270D4A741FB2E65E00A77805 /* AASeriesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A661FB2E65E00A77805 /* AASeriesElement.m */; };
 		270D4A751FB2E65E00A77805 /* AAChartKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A671FB2E65E00A77805 /* AAChartKit.podspec */; };
-		270D4A761FB2E65E00A77805 /* AAChartView.html in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A691FB2E65E00A77805 /* AAChartView.html */; };
-		270D4A771FB2E65E00A77805 /* AAFunnel.js in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A6A1FB2E65E00A77805 /* AAFunnel.js */; };
-		270D4A791FB2E65E00A77805 /* AAHighChartsLibrary.js in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A6C1FB2E65E00A77805 /* AAHighChartsLibrary.js */; };
-		270D4A7A1FB2E65E00A77805 /* AAHighchartsMore.js in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A6D1FB2E65E00A77805 /* AAHighchartsMore.js */; };
-		270D4A7C1FB2E65E00A77805 /* AAOptionsConstructor.js in Resources */ = {isa = PBXBuildFile; fileRef = 270D4A6F1FB2E65E00A77805 /* AAOptionsConstructor.js */; };
 		270D4A881FB2E69300A77805 /* ChartAnimationTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A7F1FB2E69300A77805 /* ChartAnimationTypeVC.m */; };
 		270D4A891FB2E69300A77805 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D4A811FB2E69300A77805 /* FirstViewController.m */; };
+		2764F494210C619B00E17604 /* AAJSFiles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2764F493210C619B00E17604 /* AAJSFiles.bundle */; };
 		27C9DBE120ED54E9009D6769 /* ShowManyChartViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE020ED54E9009D6769 /* ShowManyChartViewVC.m */; };
 		27C9DBE420ED54F8009D6769 /* ChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE320ED54F7009D6769 /* ChartListVC.m */; };
 		27C9DBE720ED55D9009D6769 /* MixedChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9DBE520ED55D9009D6769 /* MixedChartVC.m */; };
@@ -49,15 +45,11 @@
 		270D4A651FB2E65E00A77805 /* AASeriesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASeriesElement.h; sourceTree = "<group>"; };
 		270D4A661FB2E65E00A77805 /* AASeriesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASeriesElement.m; sourceTree = "<group>"; };
 		270D4A671FB2E65E00A77805 /* AAChartKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AAChartKit.podspec; sourceTree = "<group>"; };
-		270D4A691FB2E65E00A77805 /* AAChartView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AAChartView.html; sourceTree = "<group>"; };
-		270D4A6A1FB2E65E00A77805 /* AAFunnel.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AAFunnel.js; sourceTree = "<group>"; };
-		270D4A6C1FB2E65E00A77805 /* AAHighChartsLibrary.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AAHighChartsLibrary.js; sourceTree = "<group>"; };
-		270D4A6D1FB2E65E00A77805 /* AAHighchartsMore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AAHighchartsMore.js; sourceTree = "<group>"; };
-		270D4A6F1FB2E65E00A77805 /* AAOptionsConstructor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AAOptionsConstructor.js; sourceTree = "<group>"; };
 		270D4A7E1FB2E69300A77805 /* ChartAnimationTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartAnimationTypeVC.h; sourceTree = "<group>"; };
 		270D4A7F1FB2E69300A77805 /* ChartAnimationTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartAnimationTypeVC.m; sourceTree = "<group>"; };
 		270D4A801FB2E69300A77805 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		270D4A811FB2E69300A77805 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		2764F493210C619B00E17604 /* AAJSFiles.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AAJSFiles.bundle; sourceTree = "<group>"; };
 		27C9DBDF20ED54E9009D6769 /* ShowManyChartViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowManyChartViewVC.h; sourceTree = "<group>"; };
 		27C9DBE020ED54E9009D6769 /* ShowManyChartViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowManyChartViewVC.m; sourceTree = "<group>"; };
 		27C9DBE220ED54F7009D6769 /* ChartListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartListVC.h; sourceTree = "<group>"; };
@@ -118,6 +110,7 @@
 		270D4A5B1FB2E65E00A77805 /* AAChartKit-Slim */ = {
 			isa = PBXGroup;
 			children = (
+				2764F493210C619B00E17604 /* AAJSFiles.bundle */,
 				270D4A5C1FB2E65E00A77805 /* AAChartConfiger */,
 				270D4A681FB2E65E00A77805 /* AAJSFiles */,
 				270D4A671FB2E65E00A77805 /* AAChartKit.podspec */,
@@ -143,11 +136,6 @@
 		270D4A681FB2E65E00A77805 /* AAJSFiles */ = {
 			isa = PBXGroup;
 			children = (
-				270D4A691FB2E65E00A77805 /* AAChartView.html */,
-				270D4A6F1FB2E65E00A77805 /* AAOptionsConstructor.js */,
-				270D4A6C1FB2E65E00A77805 /* AAHighChartsLibrary.js */,
-				270D4A6D1FB2E65E00A77805 /* AAHighchartsMore.js */,
-				270D4A6A1FB2E65E00A77805 /* AAFunnel.js */,
 			);
 			path = AAJSFiles;
 			sourceTree = "<group>";
@@ -249,14 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				270D4A7A1FB2E65E00A77805 /* AAHighchartsMore.js in Resources */,
 				270D4A521FB2E5EB00A77805 /* LaunchScreen.storyboard in Resources */,
 				270D4A4F1FB2E5EB00A77805 /* Assets.xcassets in Resources */,
-				270D4A7C1FB2E65E00A77805 /* AAOptionsConstructor.js in Resources */,
+				2764F494210C619B00E17604 /* AAJSFiles.bundle in Resources */,
 				270D4A751FB2E65E00A77805 /* AAChartKit.podspec in Resources */,
-				270D4A761FB2E65E00A77805 /* AAChartView.html in Resources */,
-				270D4A791FB2E65E00A77805 /* AAHighChartsLibrary.js in Resources */,
-				270D4A771FB2E65E00A77805 /* AAFunnel.js in Resources */,
 				270D4A4D1FB2E5EB00A77805 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
