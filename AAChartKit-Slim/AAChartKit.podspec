@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'AAChartKit'
-    s.version      = '2.1.4'
+    s.version      = '0.0.1'
     s.summary      = 'An elegant and friendly chart library for iOS developer'
     s.description  = <<-DESC
 ***
@@ -16,12 +16,10 @@ Pod::Spec.new do |s|
     s.license      = { :type => "MIT", :file => 'LICENSE' }
     s.authors      = {'An An' => '18256973864@163.com'}
     s.platform     = :ios, '7.0'
-    s.prefix_header_contents = '#import "AAGlobalMacro.h"'
-    s.prefix_header_file = 'AAChartKit/PrefixHeader.pch'
     s.source       = {:git => 'https://github.com/AAChartModel/AAChartKit-Slim.git', :tag => s.version}
     s.social_media_url = 'https://github.com/AAChartModel'
-    s.source_files = 'AAChartKitLib/**/*.{h,m}'
-    s.resource_bundles    = { 'AAChartKitLib' => 'AAChartKitLib/AAJSFiles/**' }
+    s.source_files = 'AAChartKit-Slim/**/*.{h,m}'
+    s.resources    = 'AAChartKit-Slim/AAJSFiles.bundle'
     s.requires_arc = true
     s.ios.frameworks = 'UIKit'
     s.ios.deployment_target = '7.0'

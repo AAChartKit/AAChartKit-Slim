@@ -112,7 +112,6 @@
 			children = (
 				2764F493210C619B00E17604 /* AAJSFiles.bundle */,
 				270D4A5C1FB2E65E00A77805 /* AAChartConfiger */,
-				270D4A681FB2E65E00A77805 /* AAJSFiles */,
 				270D4A671FB2E65E00A77805 /* AAChartKit.podspec */,
 			);
 			path = "AAChartKit-Slim";
@@ -131,13 +130,6 @@
 				270D4A661FB2E65E00A77805 /* AASeriesElement.m */,
 			);
 			path = AAChartConfiger;
-			sourceTree = "<group>";
-		};
-		270D4A681FB2E65E00A77805 /* AAJSFiles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AAJSFiles;
 			sourceTree = "<group>";
 		};
 		270D4A7D1FB2E69300A77805 /* ChartsDemo */ = {
